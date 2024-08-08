@@ -2,26 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import '@repo/ui/styles.css'
-
-import { SampleCard } from '@/features/sample-card'
+import { FormulaInput } from '@/features/formula-input'
 import { Provider } from '@/provider'
-import { Card } from '@ui/components/card'
 
 const Popup = () => {
     return (
         <Provider>
-            <div className="min-h-screen w-full p-10">
-                <h1 className="text-xl bg-gray-300 p-5 rounded-lg">Popup</h1>
-
-                <div className="my-5 w-60 space-y-3">
-                    <p>Component</p>
-                    <SampleCard />
-                </div>
-
-                <div className="my-5 w-60 space-y-3">
-                    <p>Shared Component</p>
-                    <Card />
-                </div>
+            <div className="h-screen bg-base-200 p-5">
+                <FormulaInput inline={false} />
             </div>
         </Provider>
     )
