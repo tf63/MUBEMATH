@@ -17,13 +17,21 @@
     "dependencies": {
         "@repo/ui": "workspace:*",
         "clsx": "^2.1.1",
+        "downloadjs": "^1.4.7",
+        "html-to-image": "^1.11.11",
+        "katex": "^0.16.11",
+        "lucide-react": "^0.408.0",
         "next": "^14.2.3",
         "react": "^18.2.0",
+        "react-color-palette": "^7.2.1",
         "react-dom": "^18.2.0",
+        "react-hot-toast": "^2.4.1",
         "tailwind-merge": "^2.4.0"
     },
     "devDependencies": {
         "@repo/config-tailwind": "workspace:*",
-        "@repo/config-typescript": "workspace:*"
+        "@repo/config-typescript": "workspace:*",
+        "@types/downloadjs": "^1.4.6",
+        "@types/katex": "^0.16.7"
     }
 }

@@ -1,3 +1,38 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+html,
+body,
+:root {
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* スクロールバーの幅 */
+}
+
+/* トラック（ホルダー）を非表示にするため、背景を透明にする */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* スクロールバーのスタイル */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    opacity: 30%;
+    /* スクロールバーの色 */
+    border-radius: 10px;
+    /* 角丸 */
+}
+
+/* safariではスクロールバーの右下にコーナーができるので見えないようにする */
+::-webkit-scrollbar-corner {
+    display: none;
+}
+
+/* Firefox */
+body {
+    scrollbar-width: 10px;
+}
