@@ -15,7 +15,21 @@
         "prepare": "husky",
         "generate": "plop"
     },
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-color-palette": "^7.2.1",
+        "react-hot-toast": "^2.4.1",
+        "clsx": "^2.1.1",
+        "downloadjs": "^1.4.7",
+        "html-to-image": "^1.11.11",
+        "katex": "^0.16.11",
+        "lucide-react": "^0.408.0",
+        "tailwind-merge": "^2.4.0"
+    },
     "devDependencies": {
+        "@types/downloadjs": "^1.4.6",
+        "@types/katex": "^0.16.7",
         "@biomejs/biome": "^1.8.3",
         "@playwright/test": "^1.46.0",
         "@storybook/blocks": "^8.2.7",
