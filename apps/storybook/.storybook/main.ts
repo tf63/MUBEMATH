@@ -3,7 +3,12 @@ import type { StorybookConfig } from '@storybook/nextjs'
 
 const config: StorybookConfig = {
     // appsのパスはプロジェクトに応じて追加する
-    stories: ['../../../packages/ui/src/**/*.stories.*', '../../../packages/ui/src/**/*.mdx'],
+    stories: [
+        '../../../packages/ui/src/**/*.stories.*',
+        '../../../packages/ui/src/**/*.mdx',
+        '../../../apps/next/**/*.stories.*',
+        '../../../apps/next/**/*.mdx',
+    ],
     addons: [
         '@chromatic-com/storybook',
         '@storybook/addon-essentials',
@@ -22,6 +27,7 @@ const config: StorybookConfig = {
         if (config.resolve) {
             config.resolve.alias = {
                 ...config.resolve.alias,
+                '@': path.resolve(__dirname, '../../../apps/next'),
                 '@ui': path.resolve(__dirname, '../../../packages/ui/src'),
             }
         }
