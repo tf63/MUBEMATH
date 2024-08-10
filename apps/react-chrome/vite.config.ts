@@ -5,7 +5,7 @@ import { createFilter, defineConfig } from 'vite'
 
 const manifest = defineManifest({
     manifest_version: 3,
-    name: 'Chrome Extension Template',
+    name: 'MUBEMATH Extension',
     version: '1.0.0',
     permissions: [],
     action: {
