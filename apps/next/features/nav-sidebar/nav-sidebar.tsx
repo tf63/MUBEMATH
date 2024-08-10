@@ -2,10 +2,10 @@
 
 import { useCallback, useEffect } from 'react'
 
-import { useToast } from '@/hooks/use-toast'
+import { useToast } from '@ui/hooks/use-toast'
 
 import { FormulaTemplate } from '@/features/formula-template'
-import type { Template } from '@/types/types'
+import type { Template } from '@ui/types/types'
 
 const layoutTemplates: Template[] = [
     { type: 'layout', kbd: '1', formula: '\\begin{matrix}\n\ta & b \\\\\n\tc & d\n\\end{matrix}' },

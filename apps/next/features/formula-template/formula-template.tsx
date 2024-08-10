@@ -1,6 +1,6 @@
-import { Formula } from '@/features/formula/formula'
-import { CopyBlock } from '@/features/layout/copy-block'
-import type { Template } from '@/types/types'
+import type { Template } from '@repo/ui/types/types.js'
+import { CopyBlock } from '@ui/components/copy-block'
+import { Formula } from '@ui/components/formula/formula'
 
 export const FormulaTemplate = ({ template }: { template: Template }) => {
     const { formula } = template
