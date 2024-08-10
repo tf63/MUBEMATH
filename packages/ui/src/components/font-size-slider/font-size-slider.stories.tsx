@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { FontSizeSlider } from './font-size-slider'
 
 import type { Meta, StoryObj } from '@storybook/react'
@@ -5,10 +6,24 @@ import type { Meta, StoryObj } from '@storybook/react'
 type FontSizeSliderType = typeof FontSizeSlider
 
 export default {
-    title: 'FontSizeSlider',
+    title: 'Components/FontSizeSlider',
     component: FontSizeSlider,
 } satisfies Meta<FontSizeSliderType>
 
+const FontSizeSliderWithState = () => {
+    const [fontSize, setFontSize] = useState(16)
+
+    return (
+        <div>
+            <FontSizeSlider fontSize={fontSize} setFontSize={setFontSize} />
+        </div>
+    )
+}
+
 export const Default: StoryObj<FontSizeSliderType> = {
-    render: () => <FontSizeSlider />,
+    render: () => (
+        <div className="flex justify-center items-center h-screen">
+            <FontSizeSliderWithState />
+        </div>
+    ),
 }

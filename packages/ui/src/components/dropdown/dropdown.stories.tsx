@@ -5,10 +5,14 @@ import type { Meta, StoryObj } from '@storybook/react'
 type DropdownType = typeof Dropdown
 
 export default {
-    title: 'Dropdown',
+    title: 'Components/Dropdown',
     component: Dropdown,
 } satisfies Meta<DropdownType>
 
 export const Default: StoryObj<DropdownType> = {
-    render: () => <Dropdown />,
+    render: () => (
+        <div className="flex h-screen justify-center items-center">
+            <Dropdown summary="default">content</Dropdown>
+        </div>
+    ),
 }
