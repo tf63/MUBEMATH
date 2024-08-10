@@ -11,12 +11,7 @@ module.exports = (plop) => {
                 message: 'Please select the repository name',
 
                 // Add the path to the apps to the options according to the project
-                choices: [
-                    'packages/ui/src/components',
-                    'apps/next/features',
-                    'apps/react/src/features',
-                    'apps/react-chrome/src/features',
-                ],
+                choices: ['packages/ui/src/components', 'apps/next/features', 'apps/react-chrome/src/features'],
             },
             {
                 type: 'input',

@@ -5,7 +5,7 @@
     "exports": {
         "./tailwind": "./tailwind.config.ts",
         "./postcss": "./postcss.config.mjs",
-        "./styles": "./dist/index.css"
+        "./styles.css": "./dist/index.css"
     },
     "scripts": {
         "dev": "tailwindcss -i ./styles.css -o ./dist/index.css --watch"
