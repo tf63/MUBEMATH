@@ -8,8 +8,9 @@ import { Provider } from '@/provider'
 const Popup = () => {
     return (
         <Provider>
-            <div className="h-screen bg-base-200 p-5">
+            <div className="h-screen p-5">
                 <FormulaInput inline={false} />
+                <p className="pb-3 mt-4">Web App is available at ... (GitHub)</p>
             </div>
         </Provider>
     )
