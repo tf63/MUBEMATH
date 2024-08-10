@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import '@repo/ui/styles.css'
+
 import { FormulaInput } from '@/features/formula-input'
 import { Provider } from '@/provider'
 

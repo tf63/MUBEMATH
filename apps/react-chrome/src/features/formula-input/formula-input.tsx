@@ -3,14 +3,14 @@
 import { type ChangeEvent, useRef, useState } from 'react'
 import { useColor } from 'react-color-palette'
 
-import { useDOMtoImage } from '@/hooks/use-dom-to-image'
+import { useDOMtoImage } from '@ui/hooks/use-dom-to-image'
 
-import { ColorPicker } from '@/features/color-picker'
-import { FontSizeDropdown } from '@/features/font-size-dropdown'
-import { Formula } from '@/features/formula'
+import { ColorPicker } from '@ui/components/color-picker'
+import { FontSizeDropdown } from '@ui/components/font-size-dropdown'
+import { Formula } from '@ui/components/formula'
 
 import 'react-color-palette/css'
-import { cn } from '@/lib/utils'
+import { cn } from '@ui/lib/utils'
 
 type FormulaInputProps = {
     inline: boolean
