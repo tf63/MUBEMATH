@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 type NavSidebarType = typeof NavSidebar
 
 export default {
-    title: 'NavSidebar',
+    title: 'Next/NavSidebar',
     component: NavSidebar,
 } satisfies Meta<NavSidebarType>
 

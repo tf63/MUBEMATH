@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 type FormulaInputType = typeof FormulaInput
 
 export default {
-    title: 'Next/FormulaInput',
+    title: 'Chrome/FormulaInput',
     component: FormulaInput,
 } satisfies Meta<FormulaInputType>
 

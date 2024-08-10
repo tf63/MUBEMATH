@@ -177,6 +177,9 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^1.4.0
         version: 1.6.1(react@18.3.1)
+      '@repo/config-tailwind':
+        specifier: workspace:*
+        version: link:../../packages/config-tailwind
       '@storybook/addon-a11y':
         specifier: ^8.2.7
         version: 8.2.7(storybook@8.2.7)

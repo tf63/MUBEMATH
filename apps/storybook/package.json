@@ -15,6 +15,7 @@
         "react-dom": "18.3.1"
     },
     "devDependencies": {
+        "@repo/config-tailwind": "workspace:*",
         "@chromatic-com/storybook": "^1.4.0",
         "@storybook/addon-essentials": "^8.2.7",
         "@storybook/addon-a11y": "^8.2.7",
