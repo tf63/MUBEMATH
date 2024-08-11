@@ -5,7 +5,6 @@ import { toBlob, toPng } from 'html-to-image'
 import type { RefObject } from 'react'
 
 import { useToast } from '@ui/hooks/use-toast'
-
 import { Console } from '@ui/lib/logger'
 
 export const useDOMtoImage = (elementRef: RefObject<HTMLElement>, filename = 'tmp.png') => {
@@ -18,7 +17,7 @@ export const useDOMtoImage = (elementRef: RefObject<HTMLElement>, filename = 'tm
 
         const blobPromise = toBlob(elementRef.current, {
             width: elementRef.current.offsetWidth,
-            height: elementRef.current.offsetHeight,
+            height: elementRef.current.offsetHeight
         })
         notifyWithPromise('Copied as Image !', blobPromise)
 
@@ -43,7 +42,7 @@ export const useDOMtoImage = (elementRef: RefObject<HTMLElement>, filename = 'tm
 
         const pngPromise = toPng(elementRef.current, {
             width: elementRef.current.offsetWidth,
-            height: elementRef.current.offsetHeight,
+            height: elementRef.current.offsetHeight
         })
 
         notifyWithPromise('Downloaded as Image !', pngPromise)

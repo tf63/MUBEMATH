@@ -1,13 +1,13 @@
-import { ColorPicker } from './color-picker'
-
 import type { Meta, StoryObj } from '@storybook/react'
 import { useColor } from 'react-color-palette'
+
+import { ColorPicker } from './color-picker'
 
 type ColorPickerType = typeof ColorPicker
 
 export default {
     title: 'Components/ColorPicker',
-    component: ColorPicker,
+    component: ColorPicker
 } satisfies Meta<ColorPickerType>
 
 const ColorPickerWithState = () => {
@@ -21,5 +21,5 @@ const ColorPickerWithState = () => {
 }
 
 export const Default: StoryObj<ColorPickerType> = {
-    render: () => <ColorPickerWithState />,
+    render: () => <ColorPickerWithState />
 }

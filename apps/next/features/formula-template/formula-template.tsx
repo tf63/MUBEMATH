@@ -1,4 +1,5 @@
 import type { Template } from '@repo/ui/types/types.js'
+
 import { CopyBlock } from '@ui/components/copy-block'
 import { Formula } from '@ui/components/formula/formula'
 

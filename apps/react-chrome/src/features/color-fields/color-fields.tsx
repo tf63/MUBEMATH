@@ -23,7 +23,6 @@
 
 import type React from 'react'
 import { memo, useCallback, useEffect, useState } from 'react'
-
 import { ColorService, type IColor } from 'react-color-palette'
 
 function float(value: number, decimalPlaces: number) {
@@ -59,16 +58,16 @@ export const ColorFields = memo(({ color, onChange, onChangeComplete }: IFieldsP
     const [fields, setFields] = useState({
         hex: {
             value: color.hex,
-            inputted: false,
+            inputted: false
         },
         rgb: {
             value: formatRgb(color.rgb),
-            inputted: false,
+            inputted: false
         },
         hsv: {
             value: formatHsv(color.hsv),
-            inputted: false,
-        },
+            inputted: false
+        }
     })
 
     useEffect(() => {

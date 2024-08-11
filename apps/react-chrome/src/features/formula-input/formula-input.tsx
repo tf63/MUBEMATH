@@ -1,15 +1,16 @@
 'use client'
 
-import { type ChangeEvent, useEffect, useRef, useState } from 'react'
+import { Copy, Download, Palette } from 'lucide-react'
+import { useEffect, useRef, useState, type ChangeEvent } from 'react'
+import { Alpha, Hue, Saturation, useColor } from 'react-color-palette'
+
+import { ColorFields } from '@chrome/features/color-fields'
 
 import { Formula } from '@ui/components/formula'
+import { useCloseRef } from '@ui/hooks/use-close-ref'
 import { useDOMtoImage } from '@ui/hooks/use-dom-to-image'
 
 import 'react-color-palette/css'
-import { ColorFields } from '@chrome/features/color-fields'
-import { useCloseRef } from '@ui/hooks/use-close-ref'
-import { Copy, Download, Palette } from 'lucide-react'
-import { Alpha, Hue, Saturation, useColor } from 'react-color-palette'
 
 type FormulaInputProps = {
     inline: boolean
@@ -81,7 +82,7 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
                     className="overflow-auto border-b-2 w-full"
                     style={{
                         color: color.hex,
-                        fontSize: '24px',
+                        fontSize: '24px'
                     }}
                 >
                     <Formula ref={elementRef} formula={formula} inline={inline} />

@@ -4,5 +4,5 @@ export const Console = {
             // biome-ignore lint/suspicious/noConsoleLog: <explanation>
             console.log(message)
         }
-    },
+    }
 }

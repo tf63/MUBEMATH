@@ -20,19 +20,19 @@ export const useToast = () => {
                 {
                     loading: 'Loading...',
                     success: () => message,
-                    error: () => 'Error!',
+                    error: () => 'Error!'
                 },
                 {
                     position: 'bottom-right',
                     style: {
                         width: '250px',
                         boxShadow: '4px 10px 15px rgba(34, 26, 53, 0.1)',
-                        margin: '10px 0px',
+                        margin: '10px 0px'
                     },
                     iconTheme: {
                         primary: '#A1B1FF',
-                        secondary: '#FFFFFF',
-                    },
+                        secondary: '#FFFFFF'
+                    }
                 }
             )
             .catch((error) => {

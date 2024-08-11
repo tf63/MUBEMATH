@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react'
 import { useColor } from 'react-color-palette'
+
 import { ColorFields } from '.'
 
 const ColorFieldsWithState = () => {

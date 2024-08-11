@@ -1,7 +1,7 @@
 'use client'
 
 import katex from 'katex'
-import { type Ref, forwardRef, useEffect, useRef } from 'react'
+import { forwardRef, useEffect, useRef, type Ref } from 'react'
 
 import 'katex/dist/katex.min.css'
 
@@ -20,7 +20,7 @@ const FormulaContent = ({ formula, inline }: FormulaProps, ref: Ref<HTMLDivEleme
 
         katex.render(formula, formulaRef.current, {
             throwOnError: false,
-            displayMode: !inline,
+            displayMode: !inline
         })
     }, [formula, inline])
 

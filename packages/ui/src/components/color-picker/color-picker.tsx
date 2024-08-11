@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react'
-import { Alpha, Hue, type IColor, Saturation } from 'react-color-palette'
+import { Alpha, Hue, Saturation, type IColor } from 'react-color-palette'
 
 import { Dropdown } from '@ui/components/dropdown'
 
