@@ -9,9 +9,9 @@ const manifest = defineManifest({
     version: '1.0.0',
     permissions: [],
     action: {
-        default_popup: 'index.html'
-    },
-    options_page: 'options.html'
+        default_popup: 'index.html',
+        default_icon: '128.png'
+    }
 })
 
 // https://stackoverflow.com/questions/78744180/vite-react-use-client-sourcemap-warning
