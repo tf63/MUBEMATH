@@ -6,6 +6,7 @@ import { Formula } from '@ui/components/formula'
 import { useDOMtoImage } from '@ui/hooks/use-dom-to-image'
 
 import 'react-color-palette/css'
+import { ColorFields } from '@chrome/features/color-fields'
 import { useCloseRef } from '@ui/hooks/use-close-ref'
 import { Copy, Download, Palette } from 'lucide-react'
 import { Alpha, Hue, Saturation, useColor } from 'react-color-palette'
@@ -95,10 +96,11 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
                             >
                                 <Palette className="w-6 h-6" />
                             </summary>
-                            <div className="dropdown-content w-[100px] mr-5 mt-2 space-y-5 [&_.rcp-saturation]:rounded-md [&_.rcp-root]:bg-base-100">
+                            <div className="dropdown-content w-[100px] mr-5 mt-2 space-y-3 [&_.rcp-saturation]:rounded-md [&_.rcp-root]:bg-base-100">
                                 <Saturation height={100} color={color} onChange={setColor} />
                                 <Hue color={color} onChange={setColor} />
                                 <Alpha color={color} onChange={setColor} />
+                                <ColorFields color={color} onChange={setColor} hideInput={['hsv', 'rgb']} />
                             </div>
                         </details>
                         <p className="text-xs mt-1 w-fit py-0.5 px-1">⌘+g</p>
