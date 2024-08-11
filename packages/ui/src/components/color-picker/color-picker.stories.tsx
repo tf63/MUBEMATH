@@ -14,7 +14,7 @@ const ColorPickerWithState = () => {
     const [color, setColor] = useColor('#000000FF')
 
     return (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex h-screen items-center justify-center">
             <ColorPicker color={color} setColor={setColor} />
         </div>
     )

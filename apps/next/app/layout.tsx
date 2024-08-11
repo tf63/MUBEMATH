@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ja" data-theme="light">
-            <body className={cn(inter.className, 'h-full overflow-hidden bg-base-300 p-5')}>
+            <body className={cn(inter.className, 'bg-base-300 h-full overflow-hidden p-5')}>
                 <Provider>{children}</Provider>
                 <Analytics />
             </body>
