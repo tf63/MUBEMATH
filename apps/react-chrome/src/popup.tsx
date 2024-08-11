@@ -11,7 +11,27 @@ const Popup = () => {
         <Provider>
             <div className="h-screen p-5">
                 <FormulaInput inline={false} />
-                <p className="pb-3 mt-4">Web App is available at ... (GitHub)</p>
+                <p className="mt-4 pb-3 text-slate-400">
+                    Web App is available at{' '}
+                    <a
+                        className="text-secondary underline"
+                        href="https://mubemath.vercel.app"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        https://mubemath.vercel.app
+                    </a>{' '}
+                    (
+                    <a
+                        className="text-secondary underline"
+                        href="https://github.com/tf63/MUBEMATH"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        GitHub
+                    </a>
+                    )
+                </p>
             </div>
         </Provider>
     )
