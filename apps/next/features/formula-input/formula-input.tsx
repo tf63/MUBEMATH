@@ -1,14 +1,12 @@
 'use client'
 
-import { type ChangeEvent, useRef, useState } from 'react'
+import { useRef, useState, type ChangeEvent } from 'react'
 import { useColor } from 'react-color-palette'
-
-import { useDOMtoImage } from '@ui/hooks/use-dom-to-image.tsx'
 
 import { ColorPicker } from '@ui/components/color-picker'
 import { FontSizeDropdown } from '@ui/components/font-size-dropdown'
 import { Formula } from '@ui/components/formula'
-
+import { useDOMtoImage } from '@ui/hooks/use-dom-to-image.tsx'
 import { cn } from '@ui/lib/utils'
 
 type FormulaInputProps = {
@@ -94,7 +92,7 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
                     className="mt-2 overflow-x-scroll"
                     style={{
                         color: color.hex,
-                        fontSize,
+                        fontSize
                     }}
                 >
                     <Formula ref={elementRef} formula={formula} inline={inline} />

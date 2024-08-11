@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
 
 import { FormulaInput } from '@chrome/features/formula-input'
 import { Provider } from '@chrome/provider'
+
+import './index.css'
 
 const Popup = () => {
     return (

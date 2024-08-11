@@ -1,13 +1,14 @@
-import { FormulaInput } from './formula-input'
-
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { ToastProvider } from '@ui/provider/ToastProvider'
+
+import { FormulaInput } from './formula-input'
 
 type FormulaInputType = typeof FormulaInput
 
 export default {
     title: 'Chrome/FormulaInput',
-    component: FormulaInput,
+    component: FormulaInput
 } satisfies Meta<FormulaInputType>
 
 export const Default: StoryObj<FormulaInputType> = {
@@ -16,7 +17,7 @@ export const Default: StoryObj<FormulaInputType> = {
             <FormulaInput inline={false} />
             <ToastProvider />
         </>
-    ),
+    )
 }
 
 export const Inline: StoryObj<FormulaInputType> = {
@@ -25,5 +26,5 @@ export const Inline: StoryObj<FormulaInputType> = {
             <FormulaInput inline={false} />
             <ToastProvider />
         </>
-    ),
+    )
 }

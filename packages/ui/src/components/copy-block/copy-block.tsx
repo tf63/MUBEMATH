@@ -1,6 +1,6 @@
 'use client'
 
-import { type ReactNode, useCallback } from 'react'
+import { useCallback, type ReactNode } from 'react'
 
 import { useToast } from '@ui/hooks/use-toast'
 import type { Template } from '@ui/types/types'

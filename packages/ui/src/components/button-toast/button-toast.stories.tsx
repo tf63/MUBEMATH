@@ -1,14 +1,15 @@
-import { ToastProvider } from '@ui/provider/ToastProvider'
-import { ButtonToast } from './button-toast'
-
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { useToast } from '@ui/hooks/use-toast'
+import { ToastProvider } from '@ui/provider/ToastProvider'
+
+import { ButtonToast } from './button-toast'
 
 type ButtonToastType = typeof ButtonToast
 
 export default {
     title: 'Components/ButtonToast',
-    component: ButtonToast,
+    component: ButtonToast
 } satisfies Meta<ButtonToastType>
 
 export const Default: StoryObj<ButtonToastType> = {
@@ -23,7 +24,7 @@ export const Default: StoryObj<ButtonToastType> = {
                 }}
             />
         </div>
-    ),
+    )
 }
 
 export const Loading: StoryObj<ButtonToastType> = {
@@ -38,7 +39,7 @@ export const Loading: StoryObj<ButtonToastType> = {
                 }}
             />
         </div>
-    ),
+    )
 }
 
 export const Failed: StoryObj<ButtonToastType> = {
@@ -53,5 +54,5 @@ export const Failed: StoryObj<ButtonToastType> = {
                 }}
             />
         </div>
-    ),
+    )
 }

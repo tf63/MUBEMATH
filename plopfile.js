@@ -11,40 +11,40 @@ module.exports = (plop) => {
                 message: 'Please select the repository name',
 
                 // Add the path to the apps to the options according to the project
-                choices: ['packages/ui/src/components', 'apps/next/features', 'apps/react-chrome/src/features'],
+                choices: ['packages/ui/src/components', 'apps/next/features', 'apps/react-chrome/src/features']
             },
             {
                 type: 'input',
                 name: 'path',
-                message: 'Please enter the component path (e.g. components/button)',
-            },
+                message: 'Please enter the component path (e.g. components/button)'
+            }
         ],
         actions: [
             {
                 type: 'add',
                 path: '{{repo}}/{{path}}/index.tsx',
-                templateFile: 'templates/components/index.tsx.hbs',
+                templateFile: 'templates/components/index.tsx.hbs'
             },
             {
                 type: 'add',
                 path: '{{repo}}/{{path}}/{{kebabCase (extractFilename path)}}.tsx',
-                templateFile: 'templates/components/component.tsx.hbs',
+                templateFile: 'templates/components/component.tsx.hbs'
             },
             {
                 type: 'add',
                 path: '{{repo}}/{{path}}/{{kebabCase (extractFilename path)}}.mdx',
-                templateFile: 'templates/components/component.mdx.hbs',
+                templateFile: 'templates/components/component.mdx.hbs'
             },
             {
                 type: 'add',
                 path: '{{repo}}/{{path}}/{{kebabCase (extractFilename path)}}.spec.tsx',
-                templateFile: 'templates/components/component.spec.tsx.hbs',
+                templateFile: 'templates/components/component.spec.tsx.hbs'
             },
             {
                 type: 'add',
                 path: '{{repo}}/{{path}}/{{kebabCase (extractFilename path)}}.stories.tsx',
-                templateFile: 'templates/components/component.stories.tsx.hbs',
-            },
-        ],
+                templateFile: 'templates/components/component.stories.tsx.hbs'
+            }
+        ]
     })
 }

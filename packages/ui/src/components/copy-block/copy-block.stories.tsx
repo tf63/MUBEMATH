@@ -1,20 +1,21 @@
-import type { Template } from '@ui/types/types'
-import { CopyBlock } from './copy-block'
-
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { ToastProvider } from '@ui/provider/ToastProvider'
+import type { Template } from '@ui/types/types'
+
+import { CopyBlock } from './copy-block'
 
 type CopyBlockType = typeof CopyBlock
 
 export default {
     title: 'Components/CopyBlock',
-    component: CopyBlock,
+    component: CopyBlock
 } satisfies Meta<CopyBlockType>
 
 const template: Template = {
     type: 'layout',
     kbd: '0',
-    formula: 'a = b',
+    formula: 'a = b'
 }
 
 export const Default: StoryObj<CopyBlockType> = {
@@ -23,5 +24,5 @@ export const Default: StoryObj<CopyBlockType> = {
             <CopyBlock template={template}>a = b</CopyBlock>
             <ToastProvider />
         </>
-    ),
+    )
 }

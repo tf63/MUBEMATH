@@ -2,9 +2,9 @@
 
 import { useCallback, useEffect } from 'react'
 
-import { useToast } from '@ui/hooks/use-toast'
-
 import { FormulaTemplate } from '@/features/formula-template'
+
+import { useToast } from '@ui/hooks/use-toast'
 import type { Template } from '@ui/types/types'
 
 const layoutTemplates: Template[] = [
@@ -13,29 +13,28 @@ const layoutTemplates: Template[] = [
     { type: 'layout', kbd: '3', formula: '\\begin{bmatrix}\n\ta & b \\\\\n\tc & d\n\\end{bmatrix}' },
     { type: 'layout', kbd: '4', formula: '\\begin{Bmatrix}\n\ta & b \\\\\n\tc & d\n\\end{Bmatrix}' },
     { type: 'layout', kbd: '5', formula: '\\begin{vmatrix}\n\ta & b \\\\\n\tc & d\n\\end{vmatrix}' },
-    { type: 'layout', kbd: '6', formula: '\\begin{Vmatrix}\n\ta & b \\\\\n\tc & d\n\\end{Vmatrix}' },
+    { type: 'layout', kbd: '6', formula: '\\begin{Vmatrix}\n\ta & b \\\\\n\tc & d\n\\end{Vmatrix}' }
 ]
 
 const caseTemplates: Template[] = [
     {
         type: 'case',
         kbd: '7',
-        formula: 'x = \\begin{cases}\n\ta &\\text{if } b \\\\\n\tc &\\text{if } d\n\\end{cases}',
-    },
+        formula: 'x = \\begin{cases}\n\ta &\\text{if } b \\\\\n\tc &\\text{if } d\n\\end{cases}'
+    }
 ]
 
 const alignTemplates: Template[] = [
     {
         type: 'align',
         kbd: '8',
-        formula:
-            '\\begin{align}\\nonumber\n\t\\begin{split}\n\t\ta &=b+c\\\\\n\t\t&=e+f\n\t\\end{split}\n\\end{align}',
-    },
+        formula: '\\begin{align}\\nonumber\n\t\\begin{split}\n\t\ta &=b+c\\\\\n\t\t&=e+f\n\t\\end{split}\n\\end{align}'
+    }
 ]
 
 const annotationTemplates: Template[] = [
     { type: 'annotation', kbd: '9', formula: 'x = \\underbrace{a + b + c}_{\\text{note}}' },
-    { type: 'annotation', kbd: '0', formula: 'x = \\overbrace{a + b + c}^{\\text{note}}' },
+    { type: 'annotation', kbd: '0', formula: 'x = \\overbrace{a + b + c}^{\\text{note}}' }
 ]
 
 const templates: Template[] = [...layoutTemplates, ...caseTemplates, ...alignTemplates, ...annotationTemplates]

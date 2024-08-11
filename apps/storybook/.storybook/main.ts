@@ -1,4 +1,5 @@
 import path from 'node:path'
+
 import type { StorybookConfig } from '@storybook/nextjs'
 
 const config: StorybookConfig = {
@@ -9,7 +10,7 @@ const config: StorybookConfig = {
         '../../../apps/next/**/*.stories.*',
         '../../../apps/next/**/*.mdx',
         '../../../apps/react-chrome/**/*.stories.*',
-        '../../../apps/react-chrome/**/*.mdx',
+        '../../../apps/react-chrome/**/*.mdx'
     ],
     addons: [
         '@chromatic-com/storybook',
@@ -19,11 +20,11 @@ const config: StorybookConfig = {
         '@storybook/addon-storysource',
         '@storybook/addon-a11y',
         '@storybook/addon-console',
-        '@whitespace/storybook-addon-html',
+        '@whitespace/storybook-addon-html'
     ],
     framework: {
         name: '@storybook/nextjs',
-        options: {},
+        options: {}
     },
     webpackFinal: (config) => {
         if (config.resolve) {
@@ -31,11 +32,11 @@ const config: StorybookConfig = {
                 ...config.resolve.alias,
                 '@': path.resolve(__dirname, '../../../apps/next'),
                 '@chrome': path.resolve(__dirname, '../../../apps/react-chrome/src'),
-                '@ui': path.resolve(__dirname, '../../../packages/ui/src'),
+                '@ui': path.resolve(__dirname, '../../../packages/ui/src')
             }
         }
         return config
-    },
+    }
 }
 
 export default config
