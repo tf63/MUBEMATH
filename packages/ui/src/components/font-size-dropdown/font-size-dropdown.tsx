@@ -12,13 +12,13 @@ export const FontSizeDropdown = ({ fontSize, setFontSize }: FontSizeDropdownProp
     return (
         <details className="dropdown dropdown-top" ref={closeRef}>
             <summary
-                className="btn min-w-[140px] font-semibold shadow-btn hover:border-transparent hover:bg-base-200"
+                className="btn shadow-btn hover:bg-base-200 min-w-[140px] font-semibold hover:border-transparent"
                 tabIndex={-1}
             >
                 FontSize {fontSize}
             </summary>
 
-            <ul className="dropdown-content z-50 mb-5 w-32 items-center justify-center rounded-lg bg-base-200 shadow-btn">
+            <ul className="dropdown-content bg-base-200 shadow-btn z-50 mb-5 w-32 items-center justify-center rounded-lg">
                 <li>
                     <input
                         type="radio"

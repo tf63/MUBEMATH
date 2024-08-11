@@ -22,7 +22,7 @@ const FontSizeDropdownWithState = () => {
 
 export const Default: StoryObj<FontSizeDropdownType> = {
     render: () => (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex h-screen items-center justify-center">
             <FontSizeDropdownWithState />
         </div>
     )

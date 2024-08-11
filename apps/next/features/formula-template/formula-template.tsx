@@ -1,7 +1,6 @@
-import type { Template } from '@repo/ui/types/types.js'
-
 import { CopyBlock } from '@ui/components/copy-block'
 import { Formula } from '@ui/components/formula/formula'
+import type { Template } from '@ui/types/types'
 
 export const FormulaTemplate = ({ template }: { template: Template }) => {
     const { formula } = template

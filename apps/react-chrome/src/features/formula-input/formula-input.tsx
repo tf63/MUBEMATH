@@ -79,7 +79,7 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
         <div className="mx-auto h-fit max-w-[900px]">
             <div className="flex">
                 <div
-                    className="overflow-auto border-b-2 w-full"
+                    className="w-full overflow-auto border-b-2"
                     style={{
                         color: color.hex,
                         fontSize: '24px'
@@ -88,45 +88,45 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
                     <Formula ref={elementRef} formula={formula} inline={inline} />
                 </div>
 
-                <div className="mb-auto mt-1 ml-10 gap-x-3 flex">
+                <div className="mb-auto ml-10 mt-1 flex gap-x-3">
                     <div className="flex flex-col items-center justify-center">
                         <details className="dropdown dropdown-left" ref={closeRef}>
                             <summary
-                                className="btn w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
+                                className="btn bg-base-100 h-fit w-fit flex-none rounded-full p-3 shadow-md"
                                 tabIndex={-1}
                             >
-                                <Palette className="w-6 h-6" />
+                                <Palette className="h-6 w-6" />
                             </summary>
-                            <div className="dropdown-content w-[100px] mr-5 mt-2 space-y-3 [&_.rcp-saturation]:rounded-md [&_.rcp-root]:bg-base-100">
+                            <div className="dropdown-content [&_.rcp-root]:bg-base-100 mr-5 mt-2 w-[100px] space-y-3 [&_.rcp-saturation]:rounded-md">
                                 <Saturation height={100} color={color} onChange={setColor} />
                                 <Hue color={color} onChange={setColor} />
                                 <Alpha color={color} onChange={setColor} />
                                 <ColorFields color={color} onChange={setColor} hideInput={['hsv', 'rgb']} />
                             </div>
                         </details>
-                        <p className="text-xs mt-1 w-fit py-0.5 px-1">⌘+g</p>
+                        <p className="mt-1 w-fit px-1 py-0.5 text-xs">⌘+g</p>
                     </div>
 
                     <div className="flex flex-col items-center justify-center">
                         <button
                             type="button"
-                            className="btn w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
+                            className="btn bg-base-100 h-fit w-fit flex-none rounded-full p-3 shadow-md"
                             onClick={copyImage}
                         >
-                            <Copy className="w-6 h-6" />
+                            <Copy className="h-6 w-6" />
                         </button>
-                        <p className="text-xs mt-1 w-fit py-0.5 px-1">⌘+c</p>
+                        <p className="mt-1 w-fit px-1 py-0.5 text-xs">⌘+c</p>
                     </div>
 
                     <div className="flex flex-col items-center justify-center">
                         <button
                             type="button"
-                            className="btn w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
+                            className="btn bg-base-100 h-fit w-fit flex-none rounded-full p-3 shadow-md"
                             onClick={downloadImage}
                         >
-                            <Download className="w-6 h-6" />
+                            <Download className="h-6 w-6" />
                         </button>
-                        <p className="text-xs mt-1 w-fit py-0.5 px-1">⌘+s</p>
+                        <p className="mt-1 w-fit px-1 py-0.5 text-xs">⌘+s</p>
                     </div>
                 </div>
             </div>

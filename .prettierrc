@@ -1,12 +1,12 @@
 {
+    "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+    "tailwindFunctions": ["clsx"],
     "printWidth": 119,
     "tabWidth": 4,
     "singleQuote": true,
     "trailingComma": "none",
     "semi": false,
     "htmlWhitespaceSensitivity": "css",
-    "plugins": ["prettier-plugin-tailwindcss", "@ianvs/prettier-plugin-sort-imports"],
-    "tailwindFunctions": ["clsx"],
     "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy", "classProperties"],
     "importOrderTypeScriptVersion": "5.3.3",
     "importOrder": [

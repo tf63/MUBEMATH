@@ -11,7 +11,7 @@ export default {
 
 export const Default: StoryObj<DropdownType> = {
     render: () => (
-        <div className="flex h-screen justify-center items-center">
+        <div className="flex h-screen items-center justify-center">
             <Dropdown summary="default">content</Dropdown>
         </div>
     )

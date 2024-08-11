@@ -22,7 +22,7 @@ const FontSizeSliderWithState = () => {
 
 export const Default: StoryObj<FontSizeSliderType> = {
     render: () => (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex h-screen items-center justify-center">
             <FontSizeSliderWithState />
         </div>
     )
