@@ -6,7 +6,10 @@ import { Formula } from '@ui/components/formula'
 import { useDOMtoImage } from '@ui/hooks/use-dom-to-image'
 
 import 'react-color-palette/css'
-import { Copy, Download } from 'lucide-react'
+import { ColorFields } from '@chrome/features/color-fields'
+import { useCloseRef } from '@ui/hooks/use-close-ref'
+import { Copy, Download, Palette } from 'lucide-react'
+import { Alpha, Hue, Saturation, useColor } from 'react-color-palette'
 
 type FormulaInputProps = {
     inline: boolean
@@ -29,12 +32,13 @@ type FormulaInputProps = {
 export const FormulaInput = ({ inline }: FormulaInputProps) => {
     const [formula, setFormula] = useState<string>('')
 
-    // const [color, setColor] = useColor('#000000FF')
+    const [color, setColor] = useColor('#000000FF')
     // const [fontSize, setFontSize] = useState<string>('16px')
 
     const elementRef = useRef<HTMLDivElement>(null)
 
     const { downloadImage, copyImage } = useDOMtoImage(elementRef)
+    const { closeRef } = useCloseRef()
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -49,15 +53,23 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
                 if (e.key === 's') {
                     downloadImage()
                 }
+
+                if (e.key === 'g') {
+                    if (closeRef.current == null) {
+                        return
+                    }
+
+                    closeRef.current.open = !closeRef.current.open
+                }
             }
         }
 
         window.addEventListener('keydown', handleKeyDown)
 
         return () => window.removeEventListener('keydown', handleKeyDown)
-    }, [copyImage, downloadImage])
+    }, [copyImage, downloadImage, closeRef])
 
-    const onChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    const onFormulaChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
         const { value } = event.target
         setFormula(value)
     }
@@ -68,7 +80,7 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
                 <div
                     className="overflow-auto border-b-2 w-full"
                     style={{
-                        color: 'black',
+                        color: color.hex,
                         fontSize: '24px',
                     }}
                 >
@@ -77,19 +89,38 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
 
                 <div className="mb-auto mt-1 ml-10 gap-x-3 flex">
                     <div className="flex flex-col items-center justify-center">
+                        <details className="dropdown dropdown-left" ref={closeRef}>
+                            <summary
+                                className="btn w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
+                                tabIndex={-1}
+                            >
+                                <Palette className="w-6 h-6" />
+                            </summary>
+                            <div className="dropdown-content w-[100px] mr-5 mt-2 space-y-3 [&_.rcp-saturation]:rounded-md [&_.rcp-root]:bg-base-100">
+                                <Saturation height={100} color={color} onChange={setColor} />
+                                <Hue color={color} onChange={setColor} />
+                                <Alpha color={color} onChange={setColor} />
+                                <ColorFields color={color} onChange={setColor} hideInput={['hsv', 'rgb']} />
+                            </div>
+                        </details>
+                        <p className="text-xs mt-1 w-fit py-0.5 px-1">⌘+g</p>
+                    </div>
+
+                    <div className="flex flex-col items-center justify-center">
                         <button
                             type="button"
-                            className="w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
+                            className="btn w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
                             onClick={copyImage}
                         >
                             <Copy className="w-6 h-6" />
                         </button>
                         <p className="text-xs mt-1 w-fit py-0.5 px-1">⌘+c</p>
                     </div>
+
                     <div className="flex flex-col items-center justify-center">
                         <button
                             type="button"
-                            className="w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
+                            className="btn w-fit h-fit flex-none p-3 bg-base-100 shadow-md rounded-full"
                             onClick={downloadImage}
                         >
                             <Download className="w-6 h-6" />
@@ -101,7 +132,7 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
 
             <textarea
                 value={formula}
-                onChange={onChange}
+                onChange={onFormulaChange}
                 spellCheck={false}
                 className="textarea textarea-bordered mx-auto mt-6 h-20 w-full"
                 placeholder="..."

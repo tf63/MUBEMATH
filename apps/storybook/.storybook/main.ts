@@ -30,6 +30,7 @@ const config: StorybookConfig = {
             config.resolve.alias = {
                 ...config.resolve.alias,
                 '@': path.resolve(__dirname, '../../../apps/next'),
+                '@chrome': path.resolve(__dirname, '../../../apps/react-chrome/src'),
                 '@ui': path.resolve(__dirname, '../../../packages/ui/src'),
             }
         }
